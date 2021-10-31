@@ -1,0 +1,36 @@
+.join_Hilton {
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin-top: 20px;
+  background-color: dodgerblue;
+  color: white;
+  height: 80px;
+  width: 100%;
+}
+
+.join_Hilton > #image {
+  float: left;
+  margin-left: 380px;
+  margin-top: 5px;
+  height: 70px;
+  width: 100px;
+}
+
+.join_Hilton > #subhead {
+  float: left;
+  font-weight: 900;
+  margin-left: 70px;
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+.join_Hilton > #sublink {
+  float: left;
+  color: black;
+  margin-top: 30px;
+  font-size: 20px;
+  margin-left: 15px;
+  text-decoration: underline;
+  color: white;
+}

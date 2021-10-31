@@ -1,0 +1,32 @@
+.mainCarousel {
+  margin: auto;
+  margin-top: 20px;
+  height: 550px;
+  width: 1200px;
+  text-align: center;
+}
+
+.mainCarousel img {
+  border-radius: 10px;
+}
+
+.carosel-h1 {
+  color: rgb(16, 76, 151);
+}
+
+.caroselSubheading {
+  font-size: 23px;
+  font-weight: 400;
+}
+
+#learn-more {
+  margin-top: 30px;
+  background-color: rgb(16, 76, 151);
+  color: white;
+  width: 170px;
+  height: 45px;
+  font-size: 22px;
+  border-radius: 5px;
+  border: 0;
+  outline: 0;
+}

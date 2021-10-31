@@ -1,0 +1,86 @@
+.parent-container {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.157);
+  background-color: white;
+  padding: 10px 15px 0px 15px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.header-container {
+  width: 100%;
+  height: 60px;
+}
+
+.header-container > .header-logo {
+  float: left;
+}
+
+.header-container > .navlinks {
+  display: grid;
+  grid-template-columns: 105px 75px 155px 95px;
+  font-family: "Roboto", sans-serif;
+  margin-left: 20px;
+  float: left;
+  margin-top: 15px;
+  font-size: 15px;
+  color: black;
+  width: 700px;
+  /* border: 1px solid red; */
+}
+
+.header-container a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.header-container a:hover {
+  color: rgba(0, 0, 0, 0.445);
+}
+
+.join-and-signin {
+  /* border: 1px solid red; */
+  float: right;
+  display: grid;
+  grid-template-columns: 50px auto 100px;
+  margin-top: 15px;
+}
+
+#join {
+  font-size: 17px;
+  font-weight: bold;
+  border: 0;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#signin {
+  font-size: 17px;
+  font-weight: bold;
+  border: 0;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#join:hover {
+  color: rgba(0, 0, 0, 0.445);
+}
+#signin:hover {
+  color: rgba(0, 0, 0, 0.445);
+}
+
+.user-logo {
+  float: right;
+  margin-top: 2px;
+  color: rgb(0, 119, 255);
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+#join,
+#signin,
+.user-logo :hover {
+  cursor: pointer;
+}

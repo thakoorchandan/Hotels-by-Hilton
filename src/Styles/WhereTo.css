@@ -1,0 +1,126 @@
+.where-to-container {
+  margin: auto;
+  margin-top: 10px;
+  height: 100px;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 600px 250px 400px;
+}
+
+#where-to {
+  margin-top: 15px;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+#where-to-input {
+  border: 1px solid rgba(0, 0, 0, 0.226);
+  padding-left: 15px;
+  font-size: 18px;
+  height: 45px;
+  width: 600px;
+}
+
+/* Date Range Picker CSS */
+.Calender-box {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-left: 50px;
+  margin-top: 30px;
+  height: 60%;
+  width: 250px;
+}
+
+.Calender-box:hover {
+  cursor: pointer;
+}
+
+.start-date {
+  border-right: 2px solid rgba(0, 0, 0, 0.226);
+  width: 100%;
+}
+
+.start-date #date {
+  float: left;
+  font-size: 45px;
+  font-weight: 700;
+  color: rgb(20, 20, 172);
+  font-family: "Roboto", sans-serif;
+}
+
+.month-day {
+  float: left;
+  margin-top: 12px;
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.start-date #month,
+#day {
+  float: left;
+  font-family: "Roboto", sans-serif;
+  font-weight: 550;
+  font-size: 15px;
+  width: 50px;
+  height: 20px;
+}
+
+/* ----------------- */
+.end-date {
+  margin-left: 10px;
+  width: 100%;
+}
+
+.end-date #date {
+  float: left;
+  font-size: 45px;
+  font-weight: 700;
+  color: rgb(20, 20, 172);
+  font-family: "Roboto", sans-serif;
+}
+
+/* .month-day {
+  float: left;
+  margin-top: 3px;
+  display: grid;
+  grid-template-rows: auto auto;
+} */
+
+.end-date #month,
+#day {
+  float: left;
+  font-family: "Roboto", sans-serif;
+  font-weight: 550;
+  font-size: 15px;
+  width: 50px;
+  height: 20px;
+}
+
+/* .Calender-box .div-bar {
+  font-size: 50px;
+  color: rgba(0, 0, 0, 0.287);
+} */
+
+.setRooms {
+  float: left;
+  display: grid;
+  grid-template-columns: 160px 160px 160px;
+  margin-left: 70px;
+  grid-gap: 20px;
+  height: 40px;
+  margin-top: 45px;
+}
+
+.setRooms button {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+  border: 1px solid black;
+  font-weight: 550;
+  border-radius: 5px;
+}
+
+.setRooms #find-a-hotel {
+  background-color: rgba(4, 4, 149, 0.815);
+  color: white;
+}
