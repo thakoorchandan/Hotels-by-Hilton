@@ -1,5 +1,3 @@
-import { Carousel } from "react-bootstrap";
-import { useState } from "react";
 import "../../Styles/Carousel.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
