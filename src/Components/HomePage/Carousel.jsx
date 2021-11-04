@@ -1,6 +1,6 @@
 import { Carousel } from "react-bootstrap";
 import { useState } from "react";
-import "../Styles/Carousel.css";
+import "../../Styles/Carousel.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Carous() {
@@ -27,8 +27,15 @@ function Carous() {
             alt="Second slide"
           />
         </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://www.hilton.com/im/en/SJDWAWA/10716614/dinner-beach-setup-celebrations-at-the-resort-at-pedregal-elena-damy-design-7-.jpg?impolicy=crop&cw=5000&ch=2605&gravity=NorthWest&xposition=0&yposition=364&rw=1184&rh=617"
+            alt="Second slide"
+          />
+        </Carousel.Item>
       </Carousel>
-      <h1 class="carosel-h1">Travel Together, Stay Together</h1>
+      <h1 class="carosel-h1">Get Together and Get Away</h1>
       <div class="caroselSubheading">
         Introducing Confirmed Connecting Rooms by Hilton, the most reliable way
         to book and instantly confirm connecting rooms.

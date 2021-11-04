@@ -1,0 +1,80 @@
+.parentContainer {
+  margin: auto;
+  margin-top: 20px;
+  padding-left: 16%;
+  height: auto;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  /* border: 1px solid black; */
+}
+
+.parentContainer > form {
+  /* border: 1px solid black; */
+  /* padding-left: 250px; */
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
+.parentContainer > form input,
+select {
+  border: 1px solid rgba(0, 0, 0, 0.178);
+  height: 52px;
+  padding-left: 20px;
+  width: 500px;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+::placeholder {
+  font-family: "Roboto", sans-serif;
+  color: rgba(0, 0, 0, 0.986);
+  font-size: 16px;
+  font-weight: 650;
+}
+
+#selectCountry {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.psw_validation_info {
+  font-size: 12px;
+  display: grid;
+  grid-template-columns: 230px 300px;
+}
+
+.termcondition {
+  /* border: 1px solid black; */
+  height: 280px;
+  width: 90%;
+}
+
+.termsConditionInfo,
+.below_para {
+  width: 500px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.termsConditionInfo a,
+.below_para a {
+  text-decoration: none;
+  font-weight: 500;
+}
+.submitButton {
+  background-color: rgb(16, 76, 151);
+  color: white !important;
+  font-size: larger !important;
+  border-radius: 3px;
+  width: 60% !important;
+}
+
+.below_para {
+  font-size: 11px !important;
+  white-space: nowrap !important;
+  margin-top: 40px;
+}

@@ -1,4 +1,4 @@
-import "../Styles/BlueLine.css";
+import "../../Styles/BlueLine.css";
 
 function BlueLine() {
   return (

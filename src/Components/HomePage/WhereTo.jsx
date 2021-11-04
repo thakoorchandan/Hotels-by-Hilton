@@ -1,4 +1,4 @@
-import "../Styles/WhereTo.css";
+import "../../Styles/WhereTo.css";
 
 function WhereTo() {
   return (

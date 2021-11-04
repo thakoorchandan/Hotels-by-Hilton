@@ -1,0 +1,19 @@
+.header_body {
+  height: 75px;
+  width: 100%;
+  background-color: rgb(16, 76, 151);
+  text-align: center;
+}
+
+.header_body > img {
+  height: 70px;
+  width: 130px;
+}
+
+.header {
+  font-family: "Roboto", sans-serif;
+  margin-top: 45px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+}

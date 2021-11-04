@@ -1,4 +1,4 @@
-import "../Styles/CheckOutNew.css";
+import "../../Styles/CheckOutNew.css";
 
 function Extracheer() {
   return (
