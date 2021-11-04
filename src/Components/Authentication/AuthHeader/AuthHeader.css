@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-.header_body > img {
+.header_body > a > img {
   height: 70px;
   width: 130px;
 }

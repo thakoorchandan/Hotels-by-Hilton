@@ -6,10 +6,12 @@ function SignInHeader({ onClick }) {
         <button onClick={onClick} className="close">
           +
         </button>
-        <img
-          src="https://www.hilton.com/static_guests_assets/images/honorsLogoAlt.svg"
-          alt="logo"
-        />
+        <a href="/">
+          <img
+            src="https://www.hilton.com/static_guests_assets/images/honorsLogoAlt.svg"
+            alt="logo"
+          />
+        </a>
       </div>
       <h2 className="signInHeader">Join Hilton Honors</h2>
     </div>

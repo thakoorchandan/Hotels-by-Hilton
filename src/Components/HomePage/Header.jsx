@@ -28,10 +28,12 @@ function Header() {
       <div className="parent-container">
         <div className="header-container">
           <div className="header-logo">
-            <img
-              src="https://www.hilton.com/modules/assets/svgs/logos/shop/WW.svg"
-              alt="logo"
-            />
+            <a href="/">
+              <img
+                src="https://www.hilton.com/modules/assets/svgs/logos/shop/WW.svg"
+                alt="logo"
+              />
+            </a>
           </div>
           <div className="navlinks">
             <a href="location">Locations</a>
@@ -41,7 +43,7 @@ function Header() {
           </div>
           <div className="join-and-signin">
             <button id="join">
-              <a href="/User/register">Join</a>
+              <a href="/HiltonHotels/signup">Join</a>
             </button>
             <div> | </div>
             <button id="signin">

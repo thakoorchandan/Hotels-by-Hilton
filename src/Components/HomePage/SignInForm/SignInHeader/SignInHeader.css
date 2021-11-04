@@ -14,7 +14,7 @@
   cursor: pointer;
 }
 
-.signIn_header_body > img {
+.signIn_header_body > a > img {
   height: 70px;
   width: 130px;
 }

@@ -2,13 +2,12 @@ import axios from "axios";
 
 export const getPlacesData = async (type, ne, sw) => {
   try {
-    const { data } = await axios.get(`http://localhost:3000/${type}`, {
+    const { data } = await axios.get(`http://localhost:3000/${type}?limit=12`, {
       params: {
         bl_latitude: ne.lat,
         tr_latitude: sw.lat,
         bl_longitude: ne.lng,
         tr_longitude: sw.lng,
-        limit: "10",
       },
     });
     return data;

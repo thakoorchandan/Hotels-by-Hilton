@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./SignIn.css";
 import SignInHeader from "./SignInHeader/SignInHeader";
 import "../SignInForm/SignInHeader/SignInHeader.css";
+import axios from "axios";
 
 const userData = {
   email: "",
@@ -10,17 +11,30 @@ const userData = {
 
 function SignIn({ onClick }) {
   const [formData, setFormData] = useState(userData);
-  const [list, setList] = useState([]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    setList([...list, formData]);
+    try {
+      const userCredentials = await axios
+        .post("http://localhost:2233/signin", formData)
+        .then((res) => {
+          if (res.data.token) {
+            localStorage.setItem("token", res.data.token);
+            localStorage.setItem("username", res.data.user.first_name);
+            console.log("Token added succesfully");
+            // window.location = "/";
+          }
+        });
+    } catch (err) {
+      alert("Your email or password is incorrect, Please Check and try again");
+    }
+    // console.log(formData);
+    // setList([...list, formData]);
   };
 
   return (
@@ -32,7 +46,7 @@ function SignIn({ onClick }) {
           <form onSubmit={(e) => handleSubmit(e)}>
             <input
               onChange={handleChange}
-              required="true"
+              required={true}
               name="email"
               type="email"
               placeholder="Email"
@@ -43,7 +57,7 @@ function SignIn({ onClick }) {
               type="password"
               name="password"
               onChange={handleChange}
-              required="true"
+              required={true}
               minLength="8"
               placeholder="Password"
             />

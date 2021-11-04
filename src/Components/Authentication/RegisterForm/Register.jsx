@@ -37,16 +37,20 @@ function Register() {
     e.preventDefault();
     // console.log(formData);
     try {
-      const userInfo = await axios.post(
-        "http://localhost:2233/HiltonHotel/register",
-        formData
-      );
+      const userInfo = await axios
+        .post("http://localhost:2233/signup", formData)
+        .then((res) => {
+          // console.log(res.statusText);
+          if (res.statusText === "OK") {
+            alert("You are registered succesfully");
+            window.location = "/";
+          }
+        });
       console.log(userInfo);
     } catch (err) {
-      console.log("error:", err);
+      console.log("error :", err);
+      alert("Email already exists, Try with a new email");
     }
-
-    // setList([...list, formData]);
   };
 
   return (
@@ -57,19 +61,19 @@ function Register() {
         <form onSubmit={(e) => (handleSubmit(e), verifyPassword())}>
           <input
             onChange={handleChange}
-            required="true"
+            required={true}
             name="first_name"
             placeholder="First name"
           />
           <input
             onChange={handleChange}
-            required="true"
+            required={true}
             name="last_name"
             placeholder="Last name"
           />
           <input
             onChange={handleChange}
-            required="true"
+            required={true}
             name="phone"
             placeholder="Enter Mobile Number"
             maxLength="10"
@@ -77,19 +81,24 @@ function Register() {
           />
           <input
             onChange={handleChange}
-            required="true"
+            required={true}
             name="email"
             type="email"
             placeholder="Email"
           />
-          <select id="selectCountry" onChange={handleChange} name="country">
+          <select
+            required={true}
+            id="selectCountry"
+            onChange={handleChange}
+            name="country"
+          >
             <option value="">Select your Country</option>
             <option value="India">India</option>
             <option value="USA">USA</option>
           </select>
           <input
             onChange={handleChange}
-            required="true"
+            required={true}
             name="address_1"
             placeholder="Address 1"
           />
@@ -101,7 +110,7 @@ function Register() {
           <input
             onChange={handleChange}
             name="zip"
-            required="true"
+            required={true}
             maxLength="6"
             minLength="6"
             placeholder="Zip"
@@ -111,7 +120,7 @@ function Register() {
             type="password"
             name="password"
             onChange={handleChange}
-            required="true"
+            required={true}
             minLength="8"
             // maxLength="15"
             placeholder="Password"
@@ -131,7 +140,7 @@ function Register() {
             onChange={handleChange}
             type="password"
             name="confirm_password"
-            required="true"
+            required={true}
             minLength="8"
             // maxLength="15"
             placeholder="Confirm Password"

@@ -3,6 +3,7 @@
   width: 80%;
   margin: auto;
   text-align: center;
+  transition: 0.2s;
 }
 
 .carosel-h1 {
