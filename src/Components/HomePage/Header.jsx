@@ -1,74 +1,30 @@
 import "../../Styles/Header.css";
+import "./SignInForm/SignInHeader/SignInHeader.css";
 import { FaUserCircle } from "react-icons/fa";
-import React, { useState } from "react";
-import "./SignInForm/SignIn.css";
-import SignInHeader from "./SignInForm/SignInHeader/SignInHeader";
-
-const userData = {
-  email: "",
-  password: "",
-};
+import SignIn from "./SignInForm/SignIn";
+import { useState } from "react";
 
 function Header() {
-  const [formData, setFormData] = useState(userData);
-  const [list, setList] = useState([]);
+  const [signInPop, setSignInPop] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  const handleSignInPop = () => {
+    setSignInPop(false);
+    console.log(signInPop);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-    setList([...list, formData]);
-  };
+  console.log(signInPop);
   return (
     <>
-      <div className="mainContainer">
-        <div className="boxmodal">
-          <SignInHeader />
-          <div className="loginContainer">
-            <p>All fields are required unless marked optional. </p>
-            <form onSubmit={(e) => handleSubmit(e)}>
-              <input
-                onChange={handleChange}
-                required="true"
-                name="email"
-                type="email"
-                placeholder="Email"
-              />
-
-              <input
-                id="password"
-                type="password"
-                name="password"
-                onChange={handleChange}
-                required="true"
-                minLength="8"
-                // maxLength="15"
-                placeholder="Password"
-              />
-              <div className="psw_validation_info">
-                <ul>
-                  <li>Must be between 8 and 32 character</li>
-                  <li>Contain one uppercase letter</li>
-                </ul>
-                <ul>
-                  <li>Contain one lowercase letter</li>
-                  <li>One number (0-9) or one special character</li>
-                </ul>
-              </div>
-
-              <a href="#">Forgot Your Password</a>
-              <input className="loginButton" type="submit" value="Login" />
-              <p>
-                First Time Signing In ? <a href="#">Create your password </a>{" "}
-              </p>
-            </form>
-          </div>
-        </div>
+      <div
+        className="mainContainer"
+        style={{
+          display: signInPop ? "flex" : "none",
+          overflow: signInPop ? "hidden" : "unset",
+        }}
+      >
+        <SignIn onClick={handleSignInPop} />
       </div>
+
       <div className="parent-container">
         <div className="header-container">
           <div className="header-logo">
@@ -89,7 +45,10 @@ function Header() {
             </button>
             <div> | </div>
             <button id="signin">
-              <a href="/User/login">Sign In</a>
+              <a onClick={() => setSignInPop(true)} href="#">
+                {/* SIGN IN User Name Should be displayed */}
+                Sign In
+              </a>
               <FaUserCircle className="user-logo" />
             </button>
           </div>

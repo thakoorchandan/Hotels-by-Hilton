@@ -4,38 +4,62 @@ import "../../Styles/Carousel.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Carous() {
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex) => {
-    setIndex(selectedIndex);
-  };
-
   return (
-    <div className="mainCarousel">
-      <Carousel activeIndex={index} onSelect={handleSelect}>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://www.hilton.com/im/en/NoHotel/15548819/15027-full-all-inclusive-hero.jpg?impolicy=crop&cw=4500&ch=2344&gravity=NorthWest&xposition=0&yposition=327&rw=1184&rh=617"
-            alt="First slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://www.hilton.com/im/en/NoHotel/15621541/1252-corp-connecting-rooms-ohw-room.jpg?impolicy=crop&cw=4500&ch=2344&gravity=NorthWest&xposition=0&yposition=327&rw=1184&rh=617"
-            alt="Second slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://www.hilton.com/im/en/SJDWAWA/10716614/dinner-beach-setup-celebrations-at-the-resort-at-pedregal-elena-damy-design-7-.jpg?impolicy=crop&cw=5000&ch=2605&gravity=NorthWest&xposition=0&yposition=364&rw=1184&rh=617"
-            alt="Second slide"
-          />
-        </Carousel.Item>
-      </Carousel>
-      <h1 class="carosel-h1">Get Together and Get Away</h1>
+    <div class="header-carousel">
+      <div class="container mt-4">
+        <div
+          id="carousel-example-1z"
+          class="carousel slide carousel-fade mb-5"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carousel-example-1z"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+          </ol>
+
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <img
+                class="d-block w-100"
+                src="https://www.hilton.com/im/en/NoHotel/15548819/15027-full-all-inclusive-hero.jpg?impolicy=crop&cw=4500&ch=2344&gravity=NorthWest&xposition=0&yposition=327&rw=1184&rh=617"
+                alt="First slide"
+              />
+            </div>
+
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="https://www.hilton.com/im/en/NoHotel/15621541/1252-corp-connecting-rooms-ohw-room.jpg?impolicy=crop&cw=4500&ch=2344&gravity=NorthWest&xposition=0&yposition=327&rw=1184&rh=617"
+                alt="Second slide"
+              />
+            </div>
+          </div>
+
+          <a
+            class="carousel-control-prev"
+            href="#carousel-example-1z"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carousel-example-1z"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <h1 class="carosel-h1">Travel Together, Stay Together</h1>
       <div class="caroselSubheading">
         Introducing Confirmed Connecting Rooms by Hilton, the most reliable way
         to book and instantly confirm connecting rooms.

@@ -1,17 +1,11 @@
-.mainCarousel {
+.header-carousel {
+  height: auto;
+  width: 80%;
   margin: auto;
-  margin-top: 20px;
-  max-height: 500px;
-  width: 1200px;
   text-align: center;
 }
 
-.mainCarousel img {
-  border-radius: 10px;
-}
-
 .carosel-h1 {
-  margin-top: 20px;
   color: rgb(16, 76, 151);
 }
 

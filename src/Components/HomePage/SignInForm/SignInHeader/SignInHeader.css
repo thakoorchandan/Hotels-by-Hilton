@@ -5,6 +5,15 @@
   text-align: center;
 }
 
+.signIn_header_body > .close {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 50px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
 .signIn_header_body > img {
   height: 70px;
   width: 130px;
