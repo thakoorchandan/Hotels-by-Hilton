@@ -1,30 +1,19 @@
 import "../../Styles/Header.css";
 import "./SignInForm/SignInHeader/SignInHeader.css";
 import { FaUserCircle } from "react-icons/fa";
-import SignIn from "./SignInForm/SignIn";
-import { useState } from "react";
+
+const token = localStorage.getItem("token");
+const username = localStorage.getItem("username");
+let keysToRemove = ["token", "username"];
+
+const handleLocalStorage = () => {
+  keysToRemove.forEach((k) => localStorage.removeItem(k));
+  alert("You are logged out");
+};
 
 function Header() {
-  const [signInPop, setSignInPop] = useState(false);
-
-  const handleSignInPop = () => {
-    setSignInPop(false);
-    console.log(signInPop);
-  };
-
-  console.log(signInPop);
   return (
     <>
-      <div
-        className="mainContainer"
-        style={{
-          display: signInPop ? "flex" : "none",
-          overflow: signInPop ? "hidden" : "unset",
-        }}
-      >
-        <SignIn onClick={handleSignInPop} />
-      </div>
-
       <div className="parent-container">
         <div className="header-container">
           <div className="header-logo">
@@ -36,20 +25,28 @@ function Header() {
             </a>
           </div>
           <div className="navlinks">
-            <a href="location">Locations</a>
+            <a href="/HiltonHotels/location">Locations</a>
             <a href="#">Offers</a>
             <a href="#">Meeting & Events</a>
             <a href="#">Credit Cards</a>
           </div>
-          <div className="join-and-signin">
-            <button id="join">
-              <a href="/HiltonHotels/signup">Join</a>
-            </button>
+          <div className={token ? "joined-and-signed" : "join-and-signin"}>
+            {username && token ? (
+              <button id="join">
+                <a href="/" onClick={handleLocalStorage}>
+                  Logout
+                </a>
+              </button>
+            ) : (
+              <button id="join">
+                <a href="/HiltonHotels/signup">Join</a>
+              </button>
+            )}
+
             <div> | </div>
             <button id="signin">
-              <a onClick={() => setSignInPop(true)} href="#">
-                {/* SIGN IN User Name Should be displayed */}
-                Sign In
+              <a href="/HiltonHotels/signin">
+                {username ? username : "Sign In"}
               </a>
               <FaUserCircle className="user-logo" />
             </button>

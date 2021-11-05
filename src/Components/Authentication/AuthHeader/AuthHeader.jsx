@@ -10,7 +10,6 @@ function AuthHeader() {
           />
         </a>
       </div>
-      <h2 className="header">Join Hilton Honors</h2>
     </div>
   );
 }

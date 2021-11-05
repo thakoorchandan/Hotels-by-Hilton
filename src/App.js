@@ -7,16 +7,23 @@ import {
 import Home from "./Components/HomePage/Home";
 import Locations from "./Components/Locations/Location";
 import Register from "./Components/Authentication/RegisterForm/Register";
-// import Login from "./Components/HomePage/SignInForm/SignIn";
+import Sign from "./Components/HomePage/SignInForm/SignIn/SignInPage";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={() => <Redirect to="/home" />} />
-        <Route exact path="/home" component={Home} />
-        <Route path="/location" component={Locations} />
+        <Route path="/HiltonHotels/signin" exact component={Sign} />
         <Route exact path="/HiltonHotels/signup" exact component={Register} />
+
+        {localStorage.getItem("token") ? (
+          <Route exact path="/" component={Home} />
+        ) : (
+          <Redirect to={"/HiltonHotels/signin"} />
+        )}
+
+        <Route path="/HiltonHotels/location" component={Locations} />
+        <Route exact path="/HiltonHotels/signin" exact component={Sign} />
       </Switch>
     </Router>
   );

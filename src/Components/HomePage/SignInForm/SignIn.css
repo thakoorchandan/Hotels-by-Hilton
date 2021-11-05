@@ -14,13 +14,15 @@
   width: 600px;
   border-radius: 3px;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 5%;
   transition: 0.2s;
   position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .boxmodal:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(16, 77, 151, 0.507),
+    0 6px 20px 0 rgba(16, 77, 151, 0.486);
 }
 
 .loginContainer {

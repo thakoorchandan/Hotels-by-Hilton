@@ -26,15 +26,13 @@ function SignIn({ onClick }) {
           if (res.data.token) {
             localStorage.setItem("token", res.data.token);
             localStorage.setItem("username", res.data.user.first_name);
-            console.log("Token added succesfully");
-            // window.location = "/";
+            window.location = "/";
           }
         });
     } catch (err) {
-      alert("Your email or password is incorrect, Please Check and try again");
+      console.log("error :", err);
+      // alert("Something went wrong");
     }
-    // console.log(formData);
-    // setList([...list, formData]);
   };
 
   return (
@@ -77,7 +75,7 @@ function SignIn({ onClick }) {
             <p>
               First Time Signing In ? <a href="#">Create your password </a>{" "}
             </p>
-            <div className="SignIn_footer"></div>
+            {/* <div className="SignIn_footer"></div> */}
           </form>
         </div>
       </div>

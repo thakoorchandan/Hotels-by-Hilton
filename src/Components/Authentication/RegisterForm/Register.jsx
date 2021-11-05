@@ -3,6 +3,7 @@ import "./Register.css";
 import AuthHeader from "../AuthHeader/AuthHeader";
 import termsAndConditionsImage from "../../../images/termsAndConditions.png";
 import axios from "axios";
+import "../AuthHeader/AuthHeader.css";
 
 const userData = {
   first_name: "",
@@ -56,6 +57,7 @@ function Register() {
   return (
     <>
       <AuthHeader />
+      <h2 className="header">Join Hilton Honors</h2>
       <div className="parentContainer">
         <p>All fields are required unless marked optional. </p>
         <form onSubmit={(e) => (handleSubmit(e), verifyPassword())}>

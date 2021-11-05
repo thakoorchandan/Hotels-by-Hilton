@@ -1,7 +1,7 @@
 .parent-container {
   border-bottom: 1px solid rgba(0, 0, 0, 0.157);
   background-color: white;
-  padding: 10px 15px 0px 15px;
+  padding: 5px 15px 0px 15px;
   position: sticky;
   top: 0;
   z-index: 99;
@@ -44,7 +44,14 @@
   /* border: 1px solid red; */
   float: right;
   display: grid;
-  grid-template-columns: 50px auto 100px;
+  grid-template-columns: 50px auto 120px;
+  margin-top: 15px;
+}
+
+.joined-and-signed {
+  float: right;
+  display: grid;
+  grid-template-columns: 100px auto 120px;
   margin-top: 15px;
 }
 
@@ -58,6 +65,7 @@
 
 #signin {
   font-size: 17px;
+  border: 1px solid black;
   font-weight: bold;
   border: 0;
   outline: 0;
