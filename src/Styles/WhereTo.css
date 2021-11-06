@@ -40,14 +40,15 @@
 .setRooms {
   float: left;
   display: grid;
-  grid-template-columns: 160px 160px 160px;
+  grid-template-columns: 170px 160px 160px;
   margin-left: 70px;
   grid-gap: 20px;
   height: 40px;
   margin-top: 45px;
 }
 
-.setRooms button {
+#special-rates,
+#find-a-hotel {
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   background-color: white;
@@ -60,3 +61,5 @@
   background-color: rgba(4, 4, 149, 0.815);
   color: white;
 }
+
+/* Rooms 1, Guests Button */
