@@ -15,7 +15,6 @@ const userData = {
   address_2: "",
   zip: "",
   password: "",
-  confirm_password: "",
 };
 
 function Register() {
@@ -41,7 +40,6 @@ function Register() {
       const userInfo = await axios
         .post("http://localhost:2233/signup", formData)
         .then((res) => {
-          // console.log(res.statusText);
           if (res.statusText === "OK") {
             alert("You are registered succesfully");
             window.location = "/";
@@ -137,17 +135,6 @@ function Register() {
               <li>One number (0-9) or one special character</li>
             </ul>
           </div>
-          <input
-            id="confirm_password"
-            onChange={handleChange}
-            type="password"
-            name="confirm_password"
-            required={true}
-            minLength="8"
-            // maxLength="15"
-            placeholder="Confirm Password"
-          />
-          <span id="message" style={{ color: "red" }}></span>
           <div>
             <img
               className="termcondition"

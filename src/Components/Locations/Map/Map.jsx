@@ -17,12 +17,12 @@ const Map = ({
   const isDesktop = useMediaQuery("(min-width:600px)");
 
   return (
-    <div style={{ marginTop: "50px" }} className={classes.mapContainer}>
+    <div style={{ height: "700px" }} className={classes.mapContainer}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyBOO-UR0wEN9axd_NdvtYxEsNZx9fQwO4w" }}
         defaultCenter={coordinates}
         center={coordinates}
-        defaultZoom={14}
+        defaultZoom={7}
         margin={[50, 50, 50, 50]}
         options={""}
         onChange={(e) => {

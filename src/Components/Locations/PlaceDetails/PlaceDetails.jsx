@@ -16,7 +16,6 @@ import Rating from "@material-ui/lab/Rating";
 import useStyles from "./styles";
 
 const PlaceDetails = ({ place, selected, refProp }) => {
-  // console.log(place);
   const classes = useStyles();
 
   if (selected)
@@ -56,12 +55,12 @@ const PlaceDetails = ({ place, selected, refProp }) => {
           </Typography>
         </Box>
         {place?.awards
-          // ?.filter(
-          //   (award) =>
-          //     award.display_name === "Certificate of Excellence 2021" ||
-          //     award.display_name === "Certificate of Excellence 2020" ||
-          //     award.display_name === "Certificate of Excellence 2019"
-          // )
+          ?.filter(
+            (award) =>
+              award.display_name === "Certificate of Excellence 2021" ||
+              award.display_name === "Certificate of Excellence 2020" ||
+              award.display_name === "Certificate of Excellence 2019"
+          )
           .map((award) => (
             <Box
               my={1}

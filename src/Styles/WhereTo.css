@@ -5,6 +5,7 @@
   width: 80%;
   display: grid;
   grid-template-columns: 600px 300px 400px;
+  /* border: 1px solid red; */
 }
 
 #where-to {
@@ -25,11 +26,17 @@
 
 .checkin_and_checkout {
   width: 400px;
-  margin-top: 8px;
+  margin-top: 12px;
   display: grid;
-  grid-template-columns: 150px 150px;
+  grid-template-columns: 170px 170px;
   grid-gap: 5px;
-  padding-left: 35px;
+  padding-left: 20px;
+}
+
+.checkin_and_checkout input {
+  /* border: 2px solid red; */
+  height: 30px;
+  padding: 8px 9px 8px;
 }
 
 .checkin_and_checkout h5 {
@@ -40,8 +47,8 @@
 .setRooms {
   float: left;
   display: grid;
-  grid-template-columns: 170px 160px 160px;
-  margin-left: 70px;
+  grid-template-columns: 160px 160px 160px;
+  margin-left: 100px;
   grid-gap: 20px;
   height: 40px;
   margin-top: 45px;

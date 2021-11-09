@@ -2,3 +2,10 @@
   top: 0;
   margin-bottom: 40px;
 }
+
+.ListData {
+  width: 600px;
+  height: 700px;
+  overflow: auto;
+  margin-left: 20px;
+}

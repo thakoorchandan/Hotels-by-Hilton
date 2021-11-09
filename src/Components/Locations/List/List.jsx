@@ -39,7 +39,7 @@ const List = ({
       </Typography>
       {isLoading ? (
         <div className={classes.loading}>
-          <CircularProgress size="7rem" />
+          <CircularProgress size="5rem" />
         </div>
       ) : (
         <>

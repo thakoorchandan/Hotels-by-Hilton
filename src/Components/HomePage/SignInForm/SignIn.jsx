@@ -26,6 +26,7 @@ function SignIn({ onClick }) {
           if (res.data.token) {
             localStorage.setItem("token", res.data.token);
             localStorage.setItem("username", res.data.user.first_name);
+            alert("You are successfully logged in, Click Ok to Continue");
             window.location = "/";
           }
         });

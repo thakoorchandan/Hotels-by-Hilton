@@ -13,12 +13,6 @@ const whereTo = {
   check_out: "",
   no_of_rooms: "",
   no_of_guests: "",
-  usePoints: "",
-  travelAgents: "",
-  AAA_Rate: "",
-  seniorRate: "",
-  governmentRates: "",
-  promotion_Code: "",
 };
 
 function WhereTo() {
@@ -83,6 +77,7 @@ function WhereTo() {
       formData.check_in = checkin;
     }
   }, [checkIn]);
+
   useEffect(() => {
     if (checkOut !== null) {
       let checkOutDate = checkOut.toString().split(" ");
@@ -115,7 +110,6 @@ function WhereTo() {
             <div>
               <h5>Check In</h5>
               <DatePicker
-                // label="Check-In"
                 value={checkIn}
                 onChange={(newValue) => {
                   setCheckIn(newValue);

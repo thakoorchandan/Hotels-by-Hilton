@@ -31,7 +31,6 @@ const Locations = () => {
   }, [rating]);
 
   useEffect(() => {
-    // console.log(bounds);
     if (bounds.ne && bounds.sw) {
       setIsLoading(true);
       getPlacesData(type, bounds.ne, bounds.sw).then((data) => {
@@ -40,7 +39,8 @@ const Locations = () => {
         setIsLoading(false);
       });
     }
-  }, [type, bounds]);
+  }, [type]);
+  // }, [type, bounds, coordinates]);
 
   return (
     <>
@@ -50,19 +50,22 @@ const Locations = () => {
       <div className="Where_To_sticky">
         <WhereTo />
       </div>
-      {/* <CssBaseline /> */}
+
       {/* <Header setCoordinates={setCoordinates} /> */}
+
       <Grid container spacing={3} style={{ width: "100%" }}>
-        <Grid item xs={12} md={4}>
-          <List
-            places={filteredPlaces.length ? filteredPlaces : places}
-            childClicked={childClicked}
-            isLoading={isLoading}
-            type={type}
-            setType={setType}
-            rating={rating}
-            setRating={setRating}
-          />
+        <Grid item xs={10} md={4}>
+          <div className="ListData">
+            <List
+              places={filteredPlaces.length ? filteredPlaces : places}
+              childClicked={childClicked}
+              isLoading={isLoading}
+              type={type}
+              setType={setType}
+              rating={rating}
+              setRating={setRating}
+            />
+          </div>
         </Grid>
         <Grid item xs={12} md={8}>
           <Map
