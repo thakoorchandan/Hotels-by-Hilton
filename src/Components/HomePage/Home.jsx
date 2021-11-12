@@ -4,6 +4,9 @@ import Header from "./Header";
 import WhereTo from "./WhereTo";
 import WhatsNew from "./WhatsNew";
 import Extracheer from "./ExtraCheer";
+import CreateMemories from "./CreateMemories";
+// import Brands from "./Brands";
+import Footer from "./../../images/Footer.png";
 
 function Home() {
   return (
@@ -14,6 +17,9 @@ function Home() {
       <Carous />
       <WhatsNew />
       <Extracheer />
+      <CreateMemories />
+
+      <img src={Footer} alt="footer" style={{ marginTop: "80px" }} />
     </>
   );
 }

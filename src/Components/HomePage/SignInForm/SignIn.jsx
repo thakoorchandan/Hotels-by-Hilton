@@ -32,7 +32,7 @@ function SignIn({ onClick }) {
         });
     } catch (err) {
       console.log("error :", err);
-      // alert("Something went wrong");
+      alert("Something went wrong");
     }
   };
 

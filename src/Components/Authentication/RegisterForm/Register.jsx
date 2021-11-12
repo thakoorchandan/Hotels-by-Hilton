@@ -58,7 +58,7 @@ function Register() {
       <h2 className="header">Join Hilton Honors</h2>
       <div className="parentContainer">
         <p>All fields are required unless marked optional. </p>
-        <form onSubmit={(e) => (handleSubmit(e), verifyPassword())}>
+        <form onSubmit={(e) => handleSubmit(e)}>
           <input
             onChange={handleChange}
             required={true}
@@ -165,12 +165,7 @@ function Register() {
             Hilton’s collection and use of your personal information.
           </p>
 
-          <input
-            disabled={functional}
-            className="submitButton"
-            type="submit"
-            value="Join for Free"
-          />
+          <input className="submitButton" type="submit" value="Join for Free" />
         </form>
         <div className="below_para">
           <p>
@@ -190,12 +185,12 @@ function Register() {
   );
 }
 
-function verifyPassword() {
-  var pw = document.getElementById("password").value;
-  var cpw = document.getElementById("confirm_password").value;
-  if (pw !== cpw) {
-    document.getElementById("message").innerHTML = "**Password doesnt match";
-  }
-}
+// function verifyPassword() {
+//   var pw = document.getElementById("password").value;
+//   var cpw = document.getElementById("confirm_password").value;
+//   if (pw !== cpw) {
+//     document.getElementById("message").innerHTML = "**Password doesnt match";
+//   }
+// }
 
 export default Register;

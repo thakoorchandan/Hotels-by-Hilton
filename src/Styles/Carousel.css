@@ -5,6 +5,9 @@
   text-align: center;
   transition: 0.2s;
 }
+.container {
+  height: 650px !important;
+}
 
 .carosel-h1 {
   color: rgb(16, 76, 151);

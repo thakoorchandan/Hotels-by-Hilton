@@ -11,18 +11,13 @@ function Carous() {
           data-ride="carousel"
         >
           <ol className="carousel-indicators">
-            <li
-              data-target="#carousel-example-1z"
-              data-slide-to="0"
-              className="active"
-            ></li>
+            <li data-target="#carousel-example-1z" data-slide-to="0"></li>
             <li data-target="#carousel-example-1z" data-slide-to="1"></li>
           </ol>
 
-          <div className="carousel-inner" role="listbox">
+          <div className="carousel-inner">
             <div className="carousel-item active">
               <img
-                className="d-block w-100"
                 src="https://www.hilton.com/im/en/NoHotel/15548819/15027-full-all-inclusive-hero.jpg?impolicy=crop&cw=4500&ch=2344&gravity=NorthWest&xposition=0&yposition=327&rw=1184&rh=617"
                 alt="First slide"
               />
@@ -30,7 +25,6 @@ function Carous() {
 
             <div className="carousel-item">
               <img
-                className="d-block w-100"
                 src="https://www.hilton.com/im/en/NoHotel/15621541/1252-corp-connecting-rooms-ohw-room.jpg?impolicy=crop&cw=4500&ch=2344&gravity=NorthWest&xposition=0&yposition=327&rw=1184&rh=617"
                 alt="Second slide"
               />

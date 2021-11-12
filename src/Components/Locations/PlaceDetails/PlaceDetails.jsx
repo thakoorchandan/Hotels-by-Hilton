@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import {
   Box,
   Typography,
@@ -12,26 +13,38 @@ import {
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import PhoneIcon from "@material-ui/icons/Phone";
 import Rating from "@material-ui/lab/Rating";
-
 import useStyles from "./styles";
 
-const PlaceDetails = ({ place, selected, refProp }) => {
+const PlaceDetails = ({ place, selected, refProp, id }) => {
   const classes = useStyles();
+  let history = useHistory();
 
   if (selected)
     refProp?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   return (
     <Card elevation={8} style={{ width: 500 }}>
-      <CardMedia
-        style={{ height: 300 }}
-        image={
-          place.photo
-            ? place.photo.images.large.url
-            : "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg"
-        }
-        title={place.name}
-      />
+      {place.ranking_category === "hotel" ? (
+        <CardMedia
+          style={{ height: 300 }}
+          image={
+            place.photo
+              ? place.photo
+              : "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg"
+          }
+          title={place.name}
+        />
+      ) : (
+        <CardMedia
+          style={{ height: 300 }}
+          image={
+            place?.photo?.images?.large?.url
+              ? place.photo.images.large.url
+              : "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg"
+          }
+          title={place.name}
+        />
+      )}
       <CardContent>
         <Typography gutterBottom variant="h5">
           {place.name}
@@ -119,6 +132,17 @@ const PlaceDetails = ({ place, selected, refProp }) => {
           >
             Web-Site
           </Button>
+          {place.ranking_category === "hotel" ? (
+            <Button
+              size="small"
+              color="primary"
+              onClick={() => history.push(`/HiltonHotels/Details/Hotels/${id}`)}
+            >
+              View
+            </Button>
+          ) : (
+            ""
+          )}
         </CardActions>
       </CardContent>
     </Card>

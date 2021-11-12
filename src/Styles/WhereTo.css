@@ -5,17 +5,17 @@
   width: 80%;
   display: grid;
   grid-template-columns: 600px 300px 400px;
-  /* border: 1px solid red; */
 }
 
 #where-to {
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Roboto", sans-serif;
 }
 
 #where-to-input {
   border: 1px solid rgba(0, 0, 0, 0.226);
+  color: black;
   padding-left: 15px;
   font-size: 18px;
   height: 55px;
@@ -26,7 +26,7 @@
 
 .checkin_and_checkout {
   width: 400px;
-  margin-top: 12px;
+  margin-top: 16px;
   display: grid;
   grid-template-columns: 170px 170px;
   grid-gap: 5px;
@@ -51,22 +51,17 @@
   margin-left: 100px;
   grid-gap: 20px;
   height: 40px;
-  margin-top: 45px;
+  margin-top: 50px;
 }
 
-#special-rates,
-#find-a-hotel {
-  font-size: 15px;
-  font-family: "Roboto", sans-serif;
-  background-color: white;
-  border: 1px solid black;
+#special-rates {
   font-weight: 550;
-  border-radius: 5px;
+  border: 1px solid rgba(4, 4, 149, 0.815);
+  color: rgba(4, 4, 149, 0.815);
 }
-
 .setRooms #find-a-hotel {
+  font-weight: 550;
   background-color: rgba(4, 4, 149, 0.815);
-  color: white;
 }
 
 /* Rooms 1, Guests Button */

@@ -16,6 +16,8 @@ const Locations = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [type, setType] = useState("hotels");
   const [rating, setRating] = useState("");
+  const query = localStorage.getItem("query");
+  // console.log(query);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -33,13 +35,13 @@ const Locations = () => {
   useEffect(() => {
     if (bounds.ne && bounds.sw) {
       setIsLoading(true);
-      getPlacesData(type, bounds.ne, bounds.sw).then((data) => {
+      getPlacesData(query, type).then((data) => {
         setPlaces(data?.filter((place) => place.name && place.num_reviews > 0));
         setFilteredPlaces([]);
         setIsLoading(false);
       });
     }
-  }, [type]);
+  }, [query, type]);
   // }, [type, bounds, coordinates]);
 
   return (
@@ -50,8 +52,6 @@ const Locations = () => {
       <div className="Where_To_sticky">
         <WhereTo />
       </div>
-
-      {/* <Header setCoordinates={setCoordinates} /> */}
 
       <Grid container spacing={3} style={{ width: "100%" }}>
         <Grid item xs={10} md={4}>

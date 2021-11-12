@@ -84,7 +84,8 @@
   width: 100px;
   background-color: rgb(192, 53, 53);
   color: white;
+  margin-top: 10px;
 }
 .Room-remove-button:hover {
-  background-color: rgb(187, 43, 43);
+  background-color: rgb(138, 0, 0);
 }

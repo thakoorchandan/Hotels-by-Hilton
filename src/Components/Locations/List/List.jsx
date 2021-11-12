@@ -34,8 +34,11 @@ const List = ({
 
   return (
     <div className={classes.container}>
-      <Typography variant="h4">
-        Restaurant, Hotels & Attractions around you
+      <Typography
+        variant="h4"
+        style={{ color: "rgb(16,76,164)", fontWeight: "600" }}
+      >
+        Hilton Hotels, Restaurants and Attractions
       </Typography>
       {isLoading ? (
         <div className={classes.loading}>
@@ -46,9 +49,9 @@ const List = ({
           <FormControl className={classes.formControl}>
             <InputLabel>Type</InputLabel>
             <Select value={type} onChange={(e) => setType(e.target.value)}>
-              <MenuItem value="restaurants">Restaurants</MenuItem>
-              <MenuItem value="hotels">Hotels</MenuItem>
-              <MenuItem value="attractions">Attractions</MenuItem>
+              <MenuItem value="Hotels">Hotels</MenuItem>
+              <MenuItem value="Restaurants">Restaurants</MenuItem>
+              <MenuItem value="Attractions">Attractions</MenuItem>
             </Select>
           </FormControl>
           <FormControl className={classes.formControl}>
@@ -64,9 +67,11 @@ const List = ({
             {places?.map((place, i) => (
               <Grid ref={elRefs[i]} item key={i} xs={12}>
                 <PlaceDetails
+                  type={type}
                   place={place}
                   selected={Number(childClicked) === i}
                   refProp={elRefs[i]}
+                  id={place._id}
                 />
               </Grid>
             ))}

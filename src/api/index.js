@@ -1,17 +1,9 @@
 import axios from "axios";
 
-export const getPlacesData = async (type, ne, sw) => {
+export const getPlacesData = async (query, type) => {
   try {
     const { data } = await axios.get(
-      `http://localhost:2233/locations/Bengaluru/${type}`,
-      {
-        params: {
-          bl_latitude: sw.lat,
-          tr_latitude: ne.lat,
-          bl_longitude: sw.lng,
-          tr_longitude: ne.lng,
-        },
-      }
+      `http://localhost:2233/locations/${query}/${type ? type : "Hotels"}`
     );
     console.log(data);
     return data;

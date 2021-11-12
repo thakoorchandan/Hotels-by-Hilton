@@ -1,0 +1,96 @@
+/* Chech-Out-Container */
+.check-out-container {
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  height: 750px;
+  width: 80%;
+  /* border: 1px solid red; */
+}
+
+.check-out-container > h1 {
+  margin-top: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  color: rgb(16, 76, 151);
+}
+
+.check-out-container > h4 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+
+.col-md-4 {
+  margin-top: 30px;
+}
+
+/* Extra Cheer Container */
+.Extra-cheer-container {
+  margin: auto;
+  margin-top: 100px;
+  height: 750px;
+  width: 80%;
+}
+
+.Extra-cheer-container > h1 {
+  margin-top: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  color: rgb(16, 76, 151);
+}
+
+.Extra-cheer-container > h4 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+
+/* Create-New-Memories */
+.Create-New-Memories {
+  margin: auto;
+  margin-top: 100px;
+  width: 80%;
+}
+
+.Create-New-Memories > h1 {
+  margin-top: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  color: rgb(16, 76, 151);
+}
+
+.Create-New-Memories > h4 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+
+.Create-New-Memories .col-md-3 > .thumbnail > img {
+  justify-content: center;
+  height: 500px;
+}
+
+.Create-New-Memories .col-md-3 > .thumbnail > h4 {
+  width: 300px;
+}
+
+.centered-text {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.2s;
+  color: white;
+  text-align: center;
+}
+
+.thumbnail:hover .centered-text {
+  top: 50%;
+}

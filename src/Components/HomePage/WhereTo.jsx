@@ -1,25 +1,27 @@
 import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import "../../Styles/WhereTo.css";
 import "../../Styles/RoomsGuestsButton.css";
 import TextField from "@mui/material/TextField";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
+import Button from "@mui/material/Button";
 import DatePicker from "@mui/lab/DatePicker";
 import { Dropdown } from "react-bootstrap";
 
-const whereTo = {
-  query: "",
-  check_in: "",
-  check_out: "",
-  no_of_rooms: "",
-  no_of_guests: "",
-};
-
 function WhereTo() {
-  const [formData, setFormData] = useState(whereTo);
+  let history = useHistory();
+  const [formData, setFormData] = useState({
+    query: "",
+    check_in: "",
+    check_out: "",
+    no_of_rooms: "",
+    no_of_adults: "",
+    no_of_kids: "",
+    total_guests: "",
+  });
   const [checkIn, setCheckIn] = useState(null);
   const [checkOut, setCheckOut] = useState(null);
-
   const [formValues, setFormValues] = useState([
     { Room: 1, Adults: 1, Kids: 0 },
   ]);
@@ -51,29 +53,62 @@ function WhereTo() {
     return sum;
   }
 
-  let handleSubmit = (event) => {
-    event.preventDefault();
-    const no_Of_Rooms = formValues.length;
-    const no_Of_Guests = formValues.reduce((accumulator, item) => {
-      return accumulator + item.Adults;
-    }, 0);
-    let guests = add(no_Of_Guests.toString().split("").map(Number));
-    formData.no_of_rooms = no_Of_Rooms;
-    formData.no_of_guests = guests;
-    console.log(formData);
-  };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+
+  const handleUpdate = (event) => {
+    event.preventDefault();
+    const no_Of_Rooms = formValues.length;
+    const no_Of_Adults = formValues.reduce((accumulator, item) => {
+      return accumulator + item.Adults;
+    }, 0);
+    const no_Of_Kids = formValues.reduce((accumulator, item) => {
+      return accumulator + item.Kids;
+    }, 0);
+    let guests = add(no_Of_Adults.toString().split("").map(Number));
+    let kids = add(no_Of_Kids.toString().split("").map(Number));
+    let startDate = (formData.no_of_rooms = no_Of_Rooms);
+    formData.no_of_adults = guests;
+    formData.no_of_kids = kids;
+    formData.total_guests = guests + kids;
+    localStorage.setItem("query", formData.query);
+    localStorage.setItem("kids", formData.no_of_kids);
+    localStorage.setItem("adults", formData.no_of_adults);
+    localStorage.setItem("checkIn", formData.check_in.date);
+    localStorage.setItem("checkOut", formData.check_out.date);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const no_Of_Rooms = formValues.length;
+    const no_Of_Adults = formValues.reduce((accumulator, item) => {
+      return accumulator + item.Adults;
+    }, 0);
+    const no_Of_Kids = formValues.reduce((accumulator, item) => {
+      return accumulator + item.Kids;
+    }, 0);
+    let guests = add(no_Of_Adults.toString().split("").map(Number));
+    let kids = add(no_Of_Kids.toString().split("").map(Number));
+    formData.no_of_rooms = no_Of_Rooms;
+    formData.no_of_adults = guests;
+    formData.no_of_kids = kids;
+    formData.total_guests = guests + kids;
+    localStorage.setItem("query", formData.query);
+    localStorage.setItem("kids", formData.no_of_kids);
+    localStorage.setItem("adults", formData.no_of_adults);
+    history.push("/HiltonHotels/Location");
+  };
+
   useEffect(() => {
     if (checkIn !== null) {
       let checkInDate = checkIn.toString().split(" ");
-      let weekDay = checkInDate[0];
+      let day = checkInDate[0];
       let month = checkInDate[1];
-      let day = checkInDate[2];
-      let checkin = Object.assign({ weekDay, month, day });
+      let date = checkInDate[2];
+      let year = checkInDate[3];
+      let checkin = Object.assign({ day, month, date, year });
       formData.check_in = checkin;
     }
   }, [checkIn]);
@@ -81,10 +116,11 @@ function WhereTo() {
   useEffect(() => {
     if (checkOut !== null) {
       let checkOutDate = checkOut.toString().split(" ");
-      let weekDay = checkOutDate[0];
+      let day = checkOutDate[0];
       let month = checkOutDate[1];
-      let day = checkOutDate[2];
-      let checkout = Object.assign({ weekDay, month, day });
+      let date = checkOutDate[2];
+      let year = checkOutDate[3];
+      let checkout = Object.assign({ day, month, date, year });
       formData.check_out = checkout;
     }
   }, [checkOut]);
@@ -96,11 +132,12 @@ function WhereTo() {
         <div id="search-where-to">
           <h1 id="where-to">Where To ?</h1>
           <input
+            required={true}
+            placeholder="City, state, location or airpot"
             name="query"
             onChange={handleChange}
             id="where-to-input"
             type="text"
-            placeholder="City, state, location or airpot"
           />
         </div>
 
@@ -110,6 +147,7 @@ function WhereTo() {
             <div>
               <h5>Check In</h5>
               <DatePicker
+                required={true}
                 value={checkIn}
                 onChange={(newValue) => {
                   setCheckIn(newValue);
@@ -120,6 +158,7 @@ function WhereTo() {
             <div>
               <h5>Check Out</h5>
               <DatePicker
+                required={true}
                 value={checkOut}
                 onChange={(newValue) => {
                   setCheckOut(newValue);
@@ -139,7 +178,7 @@ function WhereTo() {
 
             <Dropdown.Menu>
               <div className="Room_main_Container">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleUpdate}>
                   {formValues.map((element, index) => (
                     <div className="Room_parent_container">
                       <div className="child-contain-content" key={index}>
@@ -197,7 +236,7 @@ function WhereTo() {
                       Add
                     </button>
                     <button className="Room-add-button" type="submit">
-                      Submit
+                      Update
                     </button>
                   </div>
                 </form>
@@ -205,8 +244,14 @@ function WhereTo() {
             </Dropdown.Menu>
           </Dropdown>
 
-          <button id="special-rates">Special Rates</button>
-          <button id="find-a-hotel">Find a Hotel</button>
+          {/* -------------- Buttons ------------- */}
+
+          <Button variant="outlined" id="special-rates">
+            Special Rates
+          </Button>
+          <Button variant="contained" onClick={handleSubmit} id="find-a-hotel">
+            Find a Hotel
+          </Button>
         </div>
       </div>
     </>

@@ -1,0 +1,221 @@
+/*------------- Yellow Section ----------- */
+.yellow_section {
+  margin-top: 0;
+  height: 60px;
+  width: 100%;
+  background-color: rgb(253, 237, 169);
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  height: 50px;
+  width: 500px;
+  margin: auto;
+}
+
+/* Slides */
+.mySlides {
+  display: flex;
+  text-align: center;
+  margin-top: 15px;
+  font-family: "Roboto", sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.mySlides > h3 {
+  font-size: 18px;
+  margin: auto;
+  margin-top: 18px;
+  font-weight: bold;
+}
+
+.mySlides > h3 > a {
+  margin-left: 10px;
+  color: blue !important;
+  text-decoration: underline !important;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  margin: auto;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -12px;
+  color: rgb(16, 76, 151);
+  font-size: 20px;
+  user-select: none;
+  border: 0;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  color: rgb(7, 29, 150);
+}
+
+/* ----------------- Where To Section ------------- */
+.where_to_pop {
+  margin: auto;
+  margin-top: 10px;
+  width: 130px;
+}
+
+/* ----------------- Select a Room ----------------- */
+.select_a_room {
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.26);
+  margin-left: 200px;
+  float: left;
+  margin-top: 20px;
+  height: auto;
+  width: 75%;
+}
+
+/* Step 1 of 3 */
+.select_a_room > p {
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  color: rgba(0, 0, 0, 0.479);
+  width: 100px;
+  margin-top: 10px;
+  font-weight: 550;
+}
+
+/* Selec a room  */
+.select_a_room > h1 {
+  position: absolute;
+  font-weight: 900;
+  width: 300px;
+  margin-top: 50px;
+}
+
+.select_a_room > .img {
+  height: 320px;
+  width: 400px;
+  /* border: 1px solid red; */
+  float: right;
+  margin-top: 10px;
+  border-radius: 3px;
+}
+
+.select_a_room > .img > img {
+  height: 250px;
+  width: 400px;
+  border-radius: 3px;
+}
+
+.hotel_name_logo {
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: 50px auto;
+  margin-top: 10px;
+}
+
+.hotel_name_logo > h5 {
+  font-size: 23px;
+  width: 350px;
+  color: rgb(16, 76, 164);
+}
+
+/* Your Stay Includes */
+.select_a_room > h3 {
+  /* border: 1px solid black; */
+  float: left;
+  width: 130px;
+  font-weight: bold;
+  margin-top: 140px;
+  margin-right: 40px;
+}
+
+/* Check Icon stuff */
+.contains {
+  float: left;
+  margin-left: 10px;
+  color: rgba(0, 0, 0, 0.623);
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.special_Rates {
+  /* position: absolute; */
+  margin-top: 250px;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+}
+
+.special_Rates > Button {
+  height: 40px;
+  color: rgb(16, 76, 164);
+  border: 1px solid rgb(16, 76, 164);
+  margin-right: 40px;
+}
+
+.special_Rates + h6 {
+  margin-top: 20px;
+  color: rgba(0, 0, 0, 0.623);
+}
+
+.special_Rates span {
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+/* Rooms Section */
+.no_of_rooms {
+  float: left;
+  margin-top: 20px;
+  margin-left: 200px;
+  height: auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  grid-row-gap: 10px;
+}
+
+.room1 {
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  border-radius: 5px;
+  height: auto;
+  width: 475px;
+}
+
+.room1 img {
+  height: 300px;
+  width: 100%;
+}
+
+.room1 h5 {
+  margin: auto;
+  margin-top: 20px;
+  width: 400px;
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(16, 76, 164);
+}
+
+.room1 Button {
+  margin-top: 10px;
+  font-size: 16px;
+  height: 50px;
+  width: 250px;
+  background-color: rgb(16, 76, 151);
+}
+
+.room1 p {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bolder;
+}

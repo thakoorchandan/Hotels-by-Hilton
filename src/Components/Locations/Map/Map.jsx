@@ -41,25 +41,38 @@ const Map = ({
             key={i}
           >
             {!isDesktop ? (
-              <LocationOnOutlinedIcon color="primary" fontSize="large" />
+              <LocationOnOutlinedIcon color="primary" fontSize="small" />
             ) : (
-              <Paper elevation={3} className={classes.paper}>
+              <Paper elevation={6} className={classes.paper}>
                 <Typography
                   className={classes.typography}
-                  variant="subtitle2"
+                  variant="subtitle4"
                   gutterBottom
                 >
                   {place.name}
                 </Typography>
-                <img
-                  className={classes.pointer}
-                  src={
-                    place.photo
-                      ? place.photo.images.large.url
-                      : "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg"
-                  }
-                  alt={place.name}
-                />
+
+                {place.ranking_category === "hotel" ? (
+                  <img
+                    className={classes.pointer}
+                    src={
+                      place.photo
+                        ? place.photo
+                        : "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg"
+                    }
+                    alt={place.name}
+                  />
+                ) : (
+                  <img
+                    className={classes.pointer}
+                    src={
+                      place?.photo?.images?.small?.url
+                        ? place.photo.images.small.url
+                        : "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg"
+                    }
+                    alt={place.name}
+                  />
+                )}
                 <Rating size="small" value={Number(place.rating)} readOnly />
               </Paper>
             )}
