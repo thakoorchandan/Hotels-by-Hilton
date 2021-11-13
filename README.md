@@ -7,7 +7,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 <!-- Important Note -->
 !! Note : Before running this project,
+
+
 Please run the backend server which is located in (https://github.com/thakoorchandan/Hotels-by-Hilton-Backend-Part).
+
+
+Make use of postman to post the data for the specified routes which is present at (https://github.com/thakoorchandan/Hotels-by-Hilton-Backend-Part/tree/main/database).
+
+
+Please check the routers to post the data.
+
+
 Make sure to run the server using the code `npm run server`
 
 
