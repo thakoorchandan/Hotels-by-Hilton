@@ -4,6 +4,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+
+<!-- Important Note -->
+!! Note : Before running this project,
+Please run the backend server which is located in (https://github.com/thakoorchandan/Hotels-by-Hilton-Backend-Part).
+Make sure to run the server using the code `npm run server`
+
+
 In the project directory, you can run:
 
 ### `npm start`
