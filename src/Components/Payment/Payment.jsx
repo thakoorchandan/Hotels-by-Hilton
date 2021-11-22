@@ -14,7 +14,8 @@ const form = {
   zip: "",
 };
 
-function Payment({ room, handleClose, checked2, stay }) {
+function Payment({ room, handleClose, checked2, normal_rates, special_rates }) {
+  console.log(room);
   const [text, setText] = useState(form);
   const [payment, setPayment] = useState([]);
 
@@ -27,7 +28,6 @@ function Payment({ room, handleClose, checked2, stay }) {
     e.preventDefault();
     setPayment([text]);
   };
-  console.log(payment);
 
   return room.map((item) => (
     <>
@@ -205,11 +205,11 @@ function Payment({ room, handleClose, checked2, stay }) {
                 </Button>
                 {checked2 ? (
                   <button type="submit" className="btn btn-success px-3">
-                    Pay ₹{item.room_price + stay * 1000 - 1200}
+                    Pay ₹{item.room_price - special_rates}
                   </button>
                 ) : (
                   <button type="submit" className="btn btn-success px-3">
-                    Pay ₹{item.room_price + stay * 1000}
+                    Pay ₹{item.room_price - normal_rates}
                   </button>
                 )}
               </div>
@@ -221,11 +221,11 @@ function Payment({ room, handleClose, checked2, stay }) {
                 <div className="d-flex flex-row align-items-end mb-3">
                   {checked2 ? (
                     <h1 className="mb-0 yellow">
-                      ₹{item.room_price + stay * 1000 - 1200}
+                      ₹{item.room_price - special_rates}
                     </h1>
                   ) : (
                     <h1 className="mb-0 yellow">
-                      ₹{item.room_price + stay * 1000}
+                      ₹{item.room_price - normal_rates}
                     </h1>
                   )}
                   <span>.Rs</span>

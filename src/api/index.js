@@ -8,6 +8,6 @@ export const getPlacesData = async (query, type) => {
     console.log(data);
     return data;
   } catch (error) {
-    console.log("error:", error);
+    console.log("err:", error);
   }
 };

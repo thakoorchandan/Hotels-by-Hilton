@@ -16,7 +16,6 @@ import Checkbox from "@mui/material/Checkbox";
 import axios from "axios";
 import Payment from "../Payment/Payment";
 import { NavLink } from "react-router-dom";
-import { TextareaAutosize } from "@mui/core";
 
 function Details() {
   const [details, setDetails] = useState([]);
@@ -31,6 +30,10 @@ function Details() {
   var stay = Math.abs(
     localStorage.getItem("checkIn") - localStorage.getItem("checkOut")
   );
+
+  const special_rates = Math.abs(stay * 1000 - 1200);
+
+  const normal_rates = Math.abs(stay * 1000);
 
   useEffect(() => {
     const { data } = axios
@@ -64,7 +67,7 @@ function Details() {
 
   // PAYMENT POPUP and CLOSE
   const handleClickOpen = (id) => {
-    const result = details.hilton_rooms.filter((item) => item._id == id);
+    const result = details.hilton_rooms.filter((item) => item.id === id);
     setOpen(true);
     setPickedRoom(result);
   };
@@ -172,17 +175,17 @@ function Details() {
             {checked2 ? (
               <Button
                 variant="contained"
-                onClick={() => handleClickOpen(item._id)}
+                onClick={() => handleClickOpen(item.id)}
               >
-                Book From ₹{item.room_price + stay * 1000 - 1200}
+                Book From ₹{Math.abs(item.room_price - special_rates)}
               </Button>
             ) : (
               <Button
                 variant="contained"
-                onClick={() => handleClickOpen(item._id)}
+                onClick={() => handleClickOpen(item.id)}
               >
                 {/* ROOOM PRICE */}
-                Book From ₹{item.room_price + stay * 1000}
+                Book From ₹{Math.abs(item.room_price - normal_rates)}
               </Button>
             )}
             <p>Plus 5.00% service charge per stay, plus tax</p>
@@ -217,6 +220,8 @@ function Details() {
         </AppBar>
         {/* Payment Card */}
         <Payment
+          normal_rates={normal_rates}
+          special_rates={special_rates}
           stay={stay}
           checked2={checked2}
           handleClose={handleClose}
