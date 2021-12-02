@@ -1,6 +1,6 @@
 # Hilton-Hotels (Clone)
 
-Project: make a clone of [Hilton-Hotels Live !!](https://hotels-by-hilton.vercel.app/) site {:target="\_blank"}.
+Project: make a clone of [Hilton-Hotels Live !!](https://hotels-by-hilton.vercel.app/){:target="\_blank" rel="noopener"} site
 
 _Hilton Hotels & Resorts is Hilton's flagship brand and one of the largest hotel brands in the world. The brand is targeted at both business and leisure travelers with locations in major city centers, near airports, convention centers, and popular vacation destinations around the world._
 
