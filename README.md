@@ -46,7 +46,7 @@ All the image and icon links have been taken from the main website ( https://www
 
 - Hotel-Details Page:
 
-![Hotel-Details Page]((https://github.com/thakoorchandan/Hotels-by-Hilton/blob/main/public/Images/Hotel_Details_Page.png?raw=true)
+![Hotel Details Page](https://github.com/thakoorchandan/Hotels-by-Hilton/blob/main/public/Images/Hotel_Details_Page.png?raw=true)
 
 - Updating-Stay:
 
