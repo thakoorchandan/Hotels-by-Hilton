@@ -1,81 +1,64 @@
-# Getting Started with Create React App
+# Strawberrynet (Clone)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project: make a clone of https://hotels-by-hilton.vercel.app/ site
 
-## Available Scripts
+_Hilton Hotels & Resorts is Hilton's flagship brand and one of the largest hotel brands in the world. The brand is targeted at both business and leisure travelers with locations in major city centers, near airports, convention centers, and popular vacation destinations around the world._
 
+&nbsp;&nbsp;&nbsp;&#160;I integrated this project with the backend technology. The technology stack that I have learned till now in Unit-3 & Unit - 4 in MASAI SCHOOL, I was able to clone some part of the website with same looking & features. <br><br>
 
-<!-- Important Note -->
-!! Note : Before running this project, Do `npm install` to install the node_modules
+## Technology Stack Used
 
+- React JS
+- HTML
+- CSS
+- JavaScript
+- MongoDB
+- Bootstrap
+- Material UI
 
-Please run the backend server which is located in (https://github.com/thakoorchandan/Hotels-by-Hilton-Backend-Part).
+I used MongoDB Atlas to maintain the Database.
 
+## Libraries Used 🌟
 
-Make sure to run the server using the code `npm run server`
+All the image and icon links have been taken from the main website ( https://www.hilton.com/en/ )
 
+## Snapshots 📷
 
-In the project directory, you can run:
+- Landing Page (Home Page):
 
-### `npm start`
+![Home Page](https://user-images.githubusercontent.com/81949743/131253226-bbd5fc26-fcc7-4ce4-a4da-937dc6a2a784.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Category Page:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![Category Page](https://user-images.githubusercontent.com/35700009/129468620-f8ec0d8d-5878-4eb1-adb9-318a0fee9006.png)
 
-### `npm test`
+- Product Details Page:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Product Page](https://user-images.githubusercontent.com/35700009/129468634-5a6aaed9-316c-42c3-a2b0-82eec59a20ce.png)
 
-### `npm run build`
+- Wishlist Page:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Wishlist Page](https://user-images.githubusercontent.com/35700009/129468664-045f9e71-3e68-4002-a2c7-5a895b9b265e.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Bag Page:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Bag Page](https://user-images.githubusercontent.com/81949743/131253266-a3882ffd-dcbf-4717-b366-b294ba2afe76.png)
 
-### `npm run eject`
+- Checkout Page:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Checkout Page](https://user-images.githubusercontent.com/35700009/129468699-71e1556a-0c7c-48b3-a5cf-42b0135686e1.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How to run the Project:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Run the command `npm run server` in terminal to start the app at port `2345`.
+2. Go to the browser enter `https://localhost:2345` in the url box, you will land home page and signup if you are a new user or signin through your credentials (if doesn't work, please disable ad blocker or try out in incognito mode).
+3. In our website you can search about the product and add product directly to bag or even to wishlist and purchase it.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### End Notes 📑
 
-## Learn More
+In this project we were tried to achieve a near to perfect clone of the original website as much as possible. This entire journey of this construct week has given us experiences and we have learned lots of things by applying to the real website and it gave us a lot of confidence. Most of the features are added and functionality of the website is achieved.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Limitations:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+All pages are not responsive yet , those pages are might not be properly visible on small screen devices.
+(Recomended Resolution: 1496 x 768 )
