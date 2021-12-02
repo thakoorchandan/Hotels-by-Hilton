@@ -1,4 +1,4 @@
-# Strawberrynet (Clone)
+# Hilton-Hotels (Clone)
 
 Project: make a clone of https://hotels-by-hilton.vercel.app/ site
 
