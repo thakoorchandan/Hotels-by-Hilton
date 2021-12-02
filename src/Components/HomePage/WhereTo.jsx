@@ -69,7 +69,7 @@ function WhereTo() {
     }, 0);
     let guests = add(no_Of_Adults.toString().split("").map(Number));
     let kids = add(no_Of_Kids.toString().split("").map(Number));
-    let startDate = (formData.no_of_rooms = no_Of_Rooms);
+    let noOfRooms = (formData.no_of_rooms = no_Of_Rooms);
     formData.no_of_adults = guests;
     formData.no_of_kids = kids;
     formData.total_guests = guests + kids;

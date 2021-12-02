@@ -21,7 +21,7 @@ function SignIn({ onClick }) {
     e.preventDefault();
     try {
       const userCredentials = await axios
-        .post("http://localhost:2233/signin", formData)
+        .post("https://safe-eyrie-23497.herokuapp.com/signin", formData)
         .then((res) => {
           if (res.data.token) {
             localStorage.setItem("token", res.data.token);

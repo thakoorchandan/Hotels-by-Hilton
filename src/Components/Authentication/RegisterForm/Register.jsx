@@ -18,15 +18,7 @@ const userData = {
 };
 
 function Register() {
-  const [functional, setFunctional] = useState(true);
   const [formData, setFormData] = useState(userData);
-  // const [list, setList] = useState([]);
-
-  useEffect(() => {
-    if (formData.password === formData.confirm_password) {
-      setFunctional(false);
-    }
-  }, [formData.password, formData.confirm_password]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -38,7 +30,7 @@ function Register() {
     // console.log(formData);
     try {
       const userInfo = await axios
-        .post("http://localhost:2233/signup", formData)
+        .post("https://safe-eyrie-23497.herokuapp.com/signup", formData)
         .then((res) => {
           if (res.statusText === "OK") {
             alert("You are registered succesfully");

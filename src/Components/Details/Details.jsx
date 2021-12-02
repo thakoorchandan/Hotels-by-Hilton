@@ -37,7 +37,9 @@ function Details() {
 
   useEffect(() => {
     const { data } = axios
-      .get(`http://localhost:2233/locations/Hyderabad/Hotels/${id}`)
+      .get(
+        `https://safe-eyrie-23497.herokuapp.com/locations/Hyderabad/Hotels/${id}`
+      )
       .then((res) => {
         let collections = res;
         setDetails(collections.data);
