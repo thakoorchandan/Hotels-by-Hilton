@@ -24,41 +24,54 @@ All the image and icon links have been taken from the main website ( https://www
 
 ## Snapshots 📷
 
+- Sign-Up (User Registration):
+
+![Sign-Up Page](https://github.com/thakoorchandan/Hotels-by-Hilton/blob/main/public/Images/Join_Page.png?raw=true)
+
+- Login-Page (User Sign-In):
+
+![Login Page](https://github.com/thakoorchandan/Hotels-by-Hilton/blob/main/public/Images/Login_Page.png?raw=true)
+
 - Landing Page (Home Page):
 
-![Home Page](https://user-images.githubusercontent.com/81949743/131253226-bbd5fc26-fcc7-4ce4-a4da-937dc6a2a784.png)
+![Home Page](https://github.com/thakoorchandan/Hotels-by-Hilton/blob/main/public/Images/Home_Page.png?raw=true)
 
-- Category Page:
+- Check-In and Check-Out Dates:
 
-![Category Page](https://user-images.githubusercontent.com/35700009/129468620-f8ec0d8d-5878-4eb1-adb9-318a0fee9006.png)
+![Where To](https://github.com/thakoorchandan/Hotels-by-Hilton/blob/main/public/Images/Check_In_&Check_Out%20.png?raw=true)
 
-- Product Details Page:
+- Loaction Page:
 
-![Product Page](https://user-images.githubusercontent.com/35700009/129468634-5a6aaed9-316c-42c3-a2b0-82eec59a20ce.png)
+![Location Page](https://github.com/thakoorchandan/Hotels-by-Hilton/blob/main/public/Images/Location_Page.png?raw=true)
 
-- Wishlist Page:
+- Hotel-Details Page:
 
-![Wishlist Page](https://user-images.githubusercontent.com/35700009/129468664-045f9e71-3e68-4002-a2c7-5a895b9b265e.png)
+![Hotel-Details Page]((https://github.com/thakoorchandan/Hotels-by-Hilton/blob/main/public/Images/Hotel_Details_Page.png?raw=true)
 
-- Bag Page:
+- Updating-Stay:
 
-![Bag Page](https://user-images.githubusercontent.com/81949743/131253266-a3882ffd-dcbf-4717-b366-b294ba2afe76.png)
+![Update Stay](https://github.com/thakoorchandan/Hotels-by-Hilton/blob/main/public/Images/Update_Stay.png?raw=true)
 
-- Checkout Page:
+- Payment Page:
 
-![Checkout Page](https://user-images.githubusercontent.com/35700009/129468699-71e1556a-0c7c-48b3-a5cf-42b0135686e1.png)
+![Payment Page](https://github.com/thakoorchandan/Hotels-by-Hilton/blob/main/public/Images/Payments_Page.png)
+
+- Payment Success Page:
+
+![Payment Success](https://github.com/thakoorchandan/Hotels-by-Hilton/blob/main/public/Images/Payment_Success.png?raw=true)
 
 ## How to run the Project:
 
-1. Run the command `npm run server` in terminal to start the app at port `2345`.
-2. Go to the browser enter `https://localhost:2345` in the url box, you will land home page and signup if you are a new user or signin through your credentials (if doesn't work, please disable ad blocker or try out in incognito mode).
-3. In our website you can search about the product and add product directly to bag or even to wishlist and purchase it.
+1. Run the command `npm i` in terminal to install all the dependencies.
+2. After installing all the dependencies, Now run the command `npm start`
+3. Go to the browser enter `https://localhost:3000` in the url box, user will land on Sign-Up page. User have to fill the form with his details along with email and password, After submitting the form, There will be an alert where it says `You have succesfully registered`. Clicking `Ok` on that alert user will be navigated to the Login Page
+4. Now user have to use his registered email and password in order to make a successful login.
 
 ### End Notes 📑
 
-In this project we were tried to achieve a near to perfect clone of the original website as much as possible. This entire journey of this construct week has given us experiences and we have learned lots of things by applying to the real website and it gave us a lot of confidence. Most of the features are added and functionality of the website is achieved.
+In this project I were tried to achieve a near to perfect clone of the original website as much as possible. This entire journey of this construct week has given me a good experience of react and I have learned lots of things by applying to the real website and it gave me a lot of confidence. Minimal features are added and functionality of the website is achieved so far.
 
 ### Limitations:
 
 All pages are not responsive yet , those pages are might not be properly visible on small screen devices.
-(Recomended Resolution: 1496 x 768 )
+(Recomended Resolution: 1920 x 1080 )
