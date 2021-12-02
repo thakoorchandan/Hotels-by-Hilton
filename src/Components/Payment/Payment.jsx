@@ -2,6 +2,7 @@ import "./Payment.css";
 import { useState } from "react";
 import Button from "@mui/material/Button";
 import { NavLink } from "react-router-dom";
+import QRCode from "react-qr-code";
 
 const form = {
   name: "",
@@ -40,16 +41,22 @@ function Payment({ room, handleClose, checked2, normal_rates, special_rates }) {
                   <div class="col-md-6 mx-auto mt-5">
                     <div class="payment">
                       <div class="payment_header">
-                        <div class="check">
-                          <i class="fa fa-check" aria-hidden="true"></i>
-                        </div>
+                        <div class="check"></div>
                       </div>
                       <div class="content">
-                        <h1>Payment Success !</h1>
+                        <QRCode value="hey" />
+                        <h1 style={{ color: "green" }}>Payment Success !</h1>
                         <h5>
-                          {item.name}, You have used {item.card_used} this card
-                          to pay for your service at our hotel and you reside at{" "}
-                          {item.street} / {item.city} / {item.zip}
+                          {item.name}, You have used
+                          <p style={{ color: "green" }}>{item.card_used}</p>
+                          this card to pay for your services at our hotel{" "}
+                          <h3 style={{ color: "green" }}>{room.name}</h3> you
+                          reside at{" "}
+                          <p style={{ color: "green" }}>
+                            {item.street} / {item.city} / {item.zip}
+                          </p>
+                          And the amount paid is{" "}
+                          <p style={{ color: "red" }}> {room.price}</p>
                         </h5>
                         <NavLink to="/" exact={true}>
                           Go to Home
@@ -108,8 +115,8 @@ function Payment({ room, handleClose, checked2, normal_rates, special_rates }) {
                         <input
                           //   Expiry
                           name="expiry"
-                          minLength="4"
-                          maxLength="4"
+                          minLength="5"
+                          maxLength="5"
                           className="form-control"
                           onChange={handleChange}
                           required={true}
